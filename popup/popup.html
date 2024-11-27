@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Productivity Timer</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="timer">Timer</button>
+                <button class="tab-btn" data-tab="todo">Todo List</button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="timerTab">
+            <div class="timer-card">
+                <div class="timer-display">
+                    <span id="minutes">25</span><span class="colon">:</span><span id="seconds">00</span>
+                </div>
+                <div class="mode-indicator">
+                    <div class="indicator-dot"></div>
+                    <span id="timerMode">Work Mode</span>
+                </div>
+                <div class="controls">
+                    <button id="startBtn" class="btn primary">Start</button>
+                    <button id="stopBtn" class="btn secondary" disabled>Stop</button>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Completed Today</span>
+                        <span id="completedCount" class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="todoTab">
+            <div class="todo-card">
+                <div class="todo-input-container">
+                    <input type="text" id="todoInput" placeholder="Add a new task..." class="todo-input">
+                    <button id="addTodoBtn" class="btn primary">Add</button>
+                </div>
+                <div class="todo-list" id="todoList">
+                    <!-- Todo items will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
